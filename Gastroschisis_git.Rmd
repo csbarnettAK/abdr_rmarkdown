@@ -75,8 +75,6 @@ library(haven)
 library(dplyr)
 library(janitor)
 library(DT)
-library(ggplot2)
-library(plotly)
 # Removing scientific notation
 options(scipen=999)
 
@@ -108,12 +106,17 @@ tmp_GAS
 Prevalence per 10,000 births of `r condition[1]` during `r datYRS[1]` by three-year moving averages, with 95% confidence interval band and Poisson estimated fitted line.
 <center>
 ```{r warning=FALSE, echo=FALSE, message=FALSE, fig.width = 9, fig.height = 6, align}
+library(ggplot2)
+library(plotly)
+
   load("R:\\ABDR\\Analysis_New\\ABDR_CASECONF\\cond_reports\\Published_reports\\abdr_website\\images\\trend_GAS.RData")
   
  load("R:\\ABDR\\Analysis_New\\ABDR_CASECONF\\cond_reports\\Published_reports\\abdr_website\\images\\trend_plot_GAS.RData")
-  trend_plot_GAS
-  trend_GAS
+
+ trend_plot_GAS
+ trend_GAS
  
+
 
 ```
 
